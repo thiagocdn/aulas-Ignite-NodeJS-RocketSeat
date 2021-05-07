@@ -1,4 +1,3 @@
-import { categoriesRoutes } from "../../../../routes/categories.routes";
 import { CategoriesRepository } from "../../repositories/CategoriesRepository";
 import { ListCategoriesController } from "./ListCategoriesController";
 import { ListCategoriesUseCase } from "./ListCategoriesUseCase";
