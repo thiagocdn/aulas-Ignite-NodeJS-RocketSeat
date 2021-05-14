@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { ImportCategoriesUseCase } from "./ImportCategoriesUseCase";
 
-
 class ImportCategoriesController {
   private importCategoriesUseCase: ImportCategoriesUseCase;
   constructor(importCategoriesUseCase: ImportCategoriesUseCase) {
