@@ -10,5 +10,6 @@
     ],
     "cli": {
       "migrationsDir": "./src/database/migrations"
-    }
+    },
+    "entities": ["./src/modules/cars/entities/*.ts"]
   }
