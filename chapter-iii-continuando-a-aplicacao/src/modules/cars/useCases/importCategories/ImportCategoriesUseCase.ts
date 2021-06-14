@@ -11,7 +11,9 @@ interface IImportCategory {
 @injectable()
 class ImportCategoriesUseCase {
   private categoriesRepository: CategoriesRepository;
-  constructor(@inject('CategoriesRepository') categoriesRepository: CategoriesRepository) {
+  constructor(
+    @inject('CategoriesRepository')
+    categoriesRepository: CategoriesRepository) {
     this.categoriesRepository = categoriesRepository;
   };
 
@@ -44,10 +46,10 @@ class ImportCategoriesUseCase {
     categories.map(async category => {
       const { name, description } = category;
 
-      const existCategory = this.categoriesRepository.findByName(name);
+      const existCategory = await this.categoriesRepository.findByName(name);
 
       if(!existCategory) {
-        this.categoriesRepository.create({
+        await this.categoriesRepository.create({
           name,
           description
         });
