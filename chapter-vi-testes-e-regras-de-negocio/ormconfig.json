@@ -5,12 +5,12 @@
   "username": "docker",
   "password": "ignite",
   "database": "rentx",
-  "migrations": ["./src/database/migrations/*.ts"],
+  "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
   "cli": {
-    "migrationsDir": "./src/database/migrations"
+    "migrationsDir": "./src/shared/infra/typeorm/migrations/"
   },
   "entities": [
-    "./src/modules/cars/entities/*.ts",
-    "./src/modules/accounts/entities/*.ts"
+    "./src/modules/cars/infra/typeorm/entities/*.ts",
+    "./src/modules/accounts/infra/typeorm/entities/*.ts"
   ]
 }

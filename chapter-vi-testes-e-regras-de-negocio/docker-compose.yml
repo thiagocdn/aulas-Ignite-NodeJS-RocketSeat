@@ -6,7 +6,7 @@ services:
     container_name: database_ignite
     ports:
       - 5432:5432
-    environment: 
+    environment:
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=ignite
       - POSTGRES_DB=rentx
@@ -21,7 +21,7 @@ services:
       - .:/usr/app
     links:
       - database_ignite
-    depends_on: 
+    depends_on:
       - database_ignite
 
 volumes:
